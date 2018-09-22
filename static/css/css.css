@@ -10,7 +10,8 @@ button {
     left: 50%;
     margin-top: -50px;
     margin-left: -100px;
+    box-shadow: 5px 5px 5px #b3c6d8;
 }
-button:hover { background-color: #0C5DA5; cursor: pointer;}
-button:active { background-color: #0b518e;}
+button:hover { background-color: #63a5e2; cursor: pointer;}
+button:active { background-color: #509be0;}
 
