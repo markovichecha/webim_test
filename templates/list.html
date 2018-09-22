@@ -7,32 +7,13 @@
    <body bgcolor="#fed766">
       <div>
          <ul>
-            <h1><center>Друзья Марка Алиева</center></h1>
-
+            <h1><center>Друзья {{name}}</center></h1>
+            {% for i in friends %}
             <li>
-               <img src="https://pp.userapi.com/c846322/v846322257/aa1c9/ER1uLItGa84.jpg?ava=1">
-               <h3>Angelina Sheptur</h3>
+               <img src="{{i['photo']|safe}}">
+               <h3>{{i['first_name']}} {{i['last_name']}}</h3>
             </li>
-            <li>
-               <img src="https://pp.userapi.com/c830400/v830400541/74dac/SN6PjuK0inA.jpg?ava=1">
-               <h3>Kamilla Gabitova</h3>
-            </li>
-
-            <li>
-               <img src="https://pp.userapi.com/c624025/v624025103/3d05f/_q2Zbmeu_Ag.jpg?ava=1">
-               <h3>Эллина Тимергалиева</h3>
-            </li>
-
-            <li>
-               <img src="https://pp.userapi.com/c844721/v844721000/e0ea5/D6mHzwogaiY.jpg?ava=1">
-               <h3>Антонина Сигарева</h3>
-            </li>
-
-            <li>
-               <img src="https://vk.com/images/camera_50.png?ava=1">
-               <h3>Вардан Еритян</h3>
-            </li>
-
+            {% endfor %}
          </ul>
       </div>
    </body>
