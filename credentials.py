@@ -3,7 +3,7 @@ from urllib.parse import urlencode
 CLIENT_ID = "6699809"
 CLIENT_SECRET= "pQJaPrdCx3qy66grUqhc"
 REDIRECT_URI = "https://webim-test.herokuapp.com/authorize"
-RESPONSE_TYPE = "token"
+RESPONSE_TYPE = "code"
 DISPLAY = "page"
 SCOPE = "friends, users"
 V = "5.85"
