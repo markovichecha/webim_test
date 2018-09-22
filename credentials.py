@@ -1,15 +1,15 @@
 from urllib.parse import urlencode
 
-CLIENT_ID = "6699809"
-CLIENT_SECRET= "pQJaPrdCx3qy66grUqhc"
-REDIRECT_URI = "https://webim-test.herokuapp.com/authorize"
+CLIENT_ID = ""
+CLIENT_SECRET= ""
+REDIRECT_URI = ""
 RESPONSE_TYPE = "code"
 DISPLAY = "page"
 SCOPE = "friends, users"
 V = "5.85"
 FIELDS = "photo, name"
 ORDER = "random"
-STATE = "mark"
+STATE = "what"
 COUNT = "5"
 
 PARAMETERS_CODE = {'client_id': CLIENT_ID,
@@ -29,7 +29,7 @@ def access_url(code):
     return "https://oauth.vk.com/access_token?redirect_uri=" + REDIRECT_URI + "&" + urlencode(PARAMETERS_AUTH) + "&code=" + code
 
 def get_name(token):
-    return REQUEST_URL + "users.get?access_token=" + token + "&v=" + V + "&name_case=gen"
+    return REQUEST_URL + "users.get?name_case=gen&access_token=" + token + "&v=" + V
 
 def get_friends(token):
     return REQUEST_URL + "friends.get?access_token=" + token + "&" + urlencode(PARAMETERS_FRIENDS)
