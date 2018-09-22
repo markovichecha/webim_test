@@ -30,3 +30,5 @@ def authorize():
         token = requests.get(c.access_url(request.args.get("code"))).json()["access_token"]
         return app.make_response(redirect('/')).set_cookie('token', value=token,
                                                            expires=datetime.datetime.now() + datetime.timedelta(days=1))
+    else:
+        return request.args.get("state")
