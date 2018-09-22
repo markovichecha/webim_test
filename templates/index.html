@@ -5,14 +5,18 @@
       <title>Авторизация</title>
    </head>
    <body bgcolor="#fed766">
-      <form action="/login" method="post"><button class="button" name="auth_button">Авторизация через ВК</button></form>
+      <form action="/login" method="post"><div><button class="button" name="auth_button">Авторизация через ВК</button></div></form>
    </body>
 </html>
 
 
 <style>
-body, html {
-   width: 100%;
+div {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 button {
     background-color: #2ab7ca;
@@ -20,12 +24,6 @@ button {
     color: #f4f4f8;
     padding: 15px 32px;
     text-align: center;
-    display: inline-block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -100px;
     box-shadow: 5px 5px 5px #caa946;
     font: 20px/1.5 "Courier New", Courier, monospace;
 }
