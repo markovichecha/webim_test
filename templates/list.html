@@ -7,7 +7,7 @@
    <body>
       <div>
          <ul>
-            <li><h1>Друзья {{name}}</h1></li>
+            <li><center><h1>Друзья {{name}}</h1></center></li>
             {% for i in friends %}
             <li>
                <img src="{{i['photo']|safe}}">
@@ -20,13 +20,14 @@
 </html>
 
 <style>
-* {margin: 0; padding: 0;}
+body, html {
+  height: 100%;
+  display: grid;
+}
 
 div {
   display:flex;
-  justify-content:center;
-  align-items:center;
-  margin: 20px;
+  margin: auto;
 }
 
 ul {
