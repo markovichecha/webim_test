@@ -9,7 +9,7 @@ SCOPE = "friends, users"
 V = "5.85"
 FIELDS = "photo, name"
 ORDER = "random"
-STATE = "389730183"
+STATE = "mark"
 COUNT = "5"
 
 PARAMETERS_CODE = {'client_id': CLIENT_ID,

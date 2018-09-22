@@ -3,9 +3,7 @@ import credentials as c
 import datetime
 import requests
 
-
 app = Flask(__name__)
-
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -22,11 +20,16 @@ def index():
 def login():
     if request.method == 'POST':
         return redirect(c.code_url())
+    else:
+        return redirect("/")
 
 
 @app.route('/authorize', methods=['GET'])
 def authorize():
-    if "state" in request.args:
+    if request.args.get("state") == c.STATE:
         token = requests.get(c.access_url(request.args.get('code'))).json()['access_token']
-        return app.make_response(redirect('/')).set_cookie('token', value=token,
-                                                           expires=datetime.datetime.now() + datetime.timedelta(days=1))
+        responce = app.make_response(redirect('/'))
+        responce.set_cookie('token', value=token, expires=datetime.datetime.now() + datetime.timedelta(days=1))
+        return responce
+    else:
+        return redirect("/")
