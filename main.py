@@ -26,7 +26,7 @@ def login():
 
 @app.route('/authorize', methods=['GET'])
 def authorize():
-    if "state" in request.args == c.STATE:
+    if "state" in request.args:
         token = requests.get(c.access_url(request.args.get('code'))).json()['access_token']
         return app.make_response(redirect('/')).set_cookie('token', value=token,
                                                            expires=datetime.datetime.now() + datetime.timedelta(days=1))
