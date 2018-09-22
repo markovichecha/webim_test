@@ -6,12 +6,12 @@
    </head>
    <body>
       <div>
+         <h1>Друзья {{name}}</h1>
          <ul>
             {% for i in friends %}
             <li>
                <img src="{{i['photo']|safe}}">
-               <h3>{{i['first_name']}}</h3>
-               <p>{{i['last_name']}}</p>
+               <h3>{{i['first_name']}} {{i['last_name']}}</h3>
             </li>
             {% endfor %}
          </ul>
@@ -41,10 +41,6 @@ h3 {
 li img {
   float: left;
   margin: 0 15px 0 0;
-}
-
-li p {
-  font: 200 12px/1.5 Georgia, Times New Roman, serif;
 }
 
 li {
