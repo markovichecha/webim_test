@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-  <link href="{{ url_for('static', filename='css/list.css') }}" rel='stylesheet' type='text/css'>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 <html lang="en">
    <head>
@@ -22,4 +21,55 @@
       </div>
    </body>
 </html>
+
+<style>
+   * {margin: 0; padding: 0;}
+
+ul {
+  list-style-type: none;
+  width: 500px;
+  background: #d6cbd3;
+}
+
+h1 {
+  font-size: 20px;
+  height: 150%;
+  color: #FFFFFF;
+  background: #bdcebe;
+}
+
+h3 {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+li img {
+  float: left;
+  margin: 0 18px 0 0;
+}
+
+li p {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+li:hover {
+  background: #eca1a6;
+  cursor: pointer;
+}
+
+body, html {
+  height: 100%;
+  display: grid;
+}
+div {
+  margin: auto;
+  box-shadow: 5px 5px 5px #b3c6d8;
+}
+</style>
 
