@@ -3,13 +3,14 @@
 ul {
   list-style-type: none;
   width: 500px;
-  background: #77bdff;
+  background: #d6cbd3;
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 20px;
+  height: 150%;
   color: #FFFFFF;
-  background: #5dacf7;
+  background: #bdcebe;
 }
 
 h3 {
@@ -33,7 +34,7 @@ li {
 }
 
 li:hover {
-  background: #63a5e2;
+  background: #eca1a6;
   cursor: pointer;
 }
 

@@ -1,5 +1,5 @@
 button {
-    background-color: #77bdff;
+    background-color: #d6cbd3;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -12,6 +12,6 @@ button {
     margin-left: -100px;
     box-shadow: 5px 5px 5px #b3c6d8;
 }
-button:hover { background-color: #63a5e2; cursor: pointer;}
-button:active { background-color: #509be0;}
+button:hover { background-color: #eca1a6; cursor: pointer;}
+button:active { background-color: #ada397;}
 
