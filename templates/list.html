@@ -13,9 +13,9 @@
             </center>
             {% for i in friends %}
             <li>
-               <img src="{{i['photo']|safe}}">
-               <h3>{{i['first_name']}}</h3>
-               <p>{{i['last_name']}}</p>
+               <img src="{{i[1]|safe}}">
+               <h3>{{i[2]}}</h3>
+               <p>{{i[3]}}</p>
             </li>
             {% endfor %}
          </ul>
