@@ -7,7 +7,7 @@
    <body>
       <div>
          <ul>
-            <li><center><h1>Друзья {{name}}</h1></center></li>
+            <h1><center>Друзья {{name}}</center></h1>
             {% for i in friends %}
             <li>
                <img src="{{i['photo']|safe}}">
@@ -35,8 +35,12 @@ ul {
   width: 500px;
 }
 
-h3 {
+h1 {
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+h3 {
+  font: 20px/1.5 Helvetica, Verdana, sans-serif;
 }
 
 li img {
