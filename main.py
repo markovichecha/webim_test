@@ -11,7 +11,8 @@ def index():
         token = request.cookies.get('token')
         r = requests.get(c.get_name(token)).json()['response'][0]
         name = r['first_name'] + " " + r['last_name']
-        return render_template('list.html', name=name)
+        friends = requests.get(c.get_friends(token)).json()['response']['items'][0]
+        return render_template('list.html', name=name, friends=friends)
     else:
         return render_template('index.html')
 
