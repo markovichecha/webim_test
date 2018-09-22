@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=["GET", "POST"])
 def index():
     if 'token' in request.cookies:
-        r = requests.get(c.get_name(requests.cookies.get('token'))).json()["responce"]
+        r = requests.get(c.get_name(request.cookies.get('token'))).json()["responce"]
         name = r["first_name"] + " " + r["last_name"]
         return render_template('list.html', name=name)
     else:
