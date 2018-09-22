@@ -3,13 +3,15 @@ import credentials as c
 import datetime
 import requests
 
+
 app = Flask(__name__)
 
 
 @app.route('/', methods=["GET", "POST"])
 def index():
     if 'token' in request.cookies:
-        r = requests.get(c.get_name(request.cookies.get('token'))).json()["responce"]
+        token = request.cookies.get('token')
+        r = requests.get(c.get_name(token)).json()["responce"]
         name = r["first_name"] + " " + r["last_name"]
         return render_template('list.html', name=name)
     else:
@@ -24,8 +26,7 @@ def login():
 
 @app.route('/authorize', methods=['GET'])
 def authorize():
-    if "code" in request.args:
-        return redirect(c.access_url(request.args.get("code")))
-    else:
-        return app.make_response(redirect('/')).set_cookie('token', value=request.args.get("access_token"),
+    if request.args.get("state") == c.STATE:
+        token = requests.get(c.access_url(request.args.get("code"))).json()["access_token"]
+        return app.make_response(redirect('/')).set_cookie('token', value=token,
                                                            expires=datetime.datetime.now() + datetime.timedelta(days=1))

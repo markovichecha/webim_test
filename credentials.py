@@ -9,10 +9,11 @@ SCOPE = "friends, users"
 V = "5.85"
 FIELDS = "photo, name"
 ORDER = "random"
+STATE = "389730183"
 COUNT = "5"
 
 PARAMETERS_CODE = {'client_id': CLIENT_ID,
-                   'response_type': RESPONSE_TYPE, 'display': DISPLAY, 'scope': SCOPE, 'v': V}
+                   'response_type': RESPONSE_TYPE, 'display': DISPLAY, 'scope': SCOPE, 'v': V, 'state': STATE}
 
 PARAMETERS_AUTH = {'client_id': CLIENT_ID, 'client_secret': CLIENT_SECRET, 'v': V}
 
