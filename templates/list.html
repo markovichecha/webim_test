@@ -4,22 +4,43 @@
    <head>
       <title>Ваши друзья</title>
    </head>
-   <body>
+   <body bgcolor="#fed766">
       <div>
          <ul>
-            <h1><center>Друзья {{name}}</center></h1>
-            {% for i in friends %}
+            <h1><center>Друзья Марка Алиева</center></h1>
+
             <li>
-               <img src="{{i['photo']|safe}}">
-               <h3>{{i['first_name']}} {{i['last_name']}}</h3>
+               <img src="https://pp.userapi.com/c846322/v846322257/aa1c9/ER1uLItGa84.jpg?ava=1">
+               <h3>Angelina Sheptur</h3>
             </li>
-            {% endfor %}
+            <li>
+               <img src="https://pp.userapi.com/c830400/v830400541/74dac/SN6PjuK0inA.jpg?ava=1">
+               <h3>Kamilla Gabitova</h3>
+            </li>
+
+            <li>
+               <img src="https://pp.userapi.com/c624025/v624025103/3d05f/_q2Zbmeu_Ag.jpg?ava=1">
+               <h3>Эллина Тимергалиева</h3>
+            </li>
+
+            <li>
+               <img src="https://pp.userapi.com/c844721/v844721000/e0ea5/D6mHzwogaiY.jpg?ava=1">
+               <h3>Антонина Сигарева</h3>
+            </li>
+
+            <li>
+               <img src="https://vk.com/images/camera_50.png?ava=1">
+               <h3>Вардан Еритян</h3>
+            </li>
+
          </ul>
       </div>
    </body>
 </html>
 
 <style>
+* {margin: 0; padding: 0;}
+
 body, html {
   height: 100%;
   display: grid;
@@ -33,14 +54,19 @@ div {
 ul {
   list-style-type: none;
   width: 500px;
+  box-shadow: 5px 5px 5px #caa946;
 }
 
 h1 {
-  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  font: bold 20px/1.5 "Courier New", Courier, monospace;
+  color:#e6e6ea;
+  background-color: #fe4a49;
 }
 
 h3 {
-  font: 20px/1.5 Helvetica, Verdana, sans-serif;
+  font: 20px/1.5 "Courier New", Courier, monospace;
+  margin: 10px 0 0 0;
+  color:#e6e6ea;
 }
 
 li img {
@@ -51,10 +77,10 @@ li img {
 li {
   padding: 10px;
   overflow: auto;
+  background-color: #2ab7ca;
 }
 
 li:hover {
-  background: #eee;
+  background:  #1f91a0;
   cursor: pointer;
 </style>
-
