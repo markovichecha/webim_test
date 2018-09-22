@@ -6,8 +6,8 @@
    </head>
    <body>
       <div>
-         <h1>Друзья {{name}}</h1>
          <ul>
+            <li><h1>Друзья {{name}}</h1></li>
             {% for i in friends %}
             <li>
                <img src="{{i['photo']|safe}}">
