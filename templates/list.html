@@ -6,10 +6,7 @@
    </head>
    <body>
       <div>
-         <ul id="cont">
-            <center>
-               <h1>Друзья {{ name }}</h1>
-            </center>
+         <ul>
             {% for i in friends %}
             <li>
                <img src="{{i['photo']|safe}}">
@@ -23,34 +20,31 @@
 </html>
 
 <style>
-   * {margin: 0; padding: 0;}
+* {margin: 0; padding: 0;}
+
+div {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: 20px;
+}
 
 ul {
   list-style-type: none;
   width: 500px;
-  background: #eca1a6;
-}
-
-h1 {
-  font-size: 20px;
-  height: 150%;
-  color: #FFFFFF;
-  background: #bdcebe;
 }
 
 h3 {
-  font-size: 20px;
-  color: #FFFFFF;
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
 }
 
 li img {
   float: left;
-  margin: 0 18px 0 0;
+  margin: 0 15px 0 0;
 }
 
 li p {
-  font-size: 18px;
-  color: #FFFFFF;
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
 }
 
 li {
@@ -59,17 +53,7 @@ li {
 }
 
 li:hover {
-  background: #d6cbd3;
+  background: #eee;
   cursor: pointer;
-}
-
-body, html {
-  height: 100%;
-  display: grid;
-}
-div {
-  margin: auto;
-  box-shadow: 5px 5px 5px #b3c6d8;
-}
 </style>
 
