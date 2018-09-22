@@ -1,0 +1,47 @@
+* {margin: 0; padding: 0;}
+
+ul {
+  list-style-type: none;
+  width: 500px;
+  background: #77bdff;
+}
+
+h1 {
+  font-size: 25px;
+  color: #FFFFFF;
+  background: #5dacf7;
+}
+
+h3 {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+li img {
+  float: left;
+  margin: 0 18px 0 0;
+}
+
+li p {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+li:hover {
+  background: #63a5e2;
+  cursor: pointer;
+}
+
+body, html {
+  height: 100%;
+  display: grid;
+}
+div {
+  margin: auto;
+  box-shadow: 5px 5px 5px #b3c6d8;
+}
